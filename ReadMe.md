@@ -2,13 +2,73 @@
 
 > 说明:
  本库使用ES6 编写 ,请确保你的Node版本支持 class Promise async await 功能
- 
+
 > 安装:
 ```
 npm i fs_sync_tool --save -d
 ```
 
-> 方法说明:
+> 使用:
+```
+//引用:
+const FsSyncTool=require("fs_sync_tool");
+
+
+//创建文件:
+FsSyncTool.outputFile('./newFile.txt', '12345');
+
+//创建文件,如果已存在则覆盖
+FsSyncTool.outputFileAndCoverOld('./newFile.txt', '678910');
+
+//创建文件,如果文件已存在,则在该文件末尾添加内容
+FsSyncTool.outputFileOrAppendContent('./newFile.txt', '678910');
+
+//检查文件是否为空
+FsSyncTool.dirIsEmpty('./test_dir')
+
+//判断是否是文件夹
+FsSyncTool.isDir('./newFile.txt')
+
+//判断是否是文件夹,如果不是文件夹则抛出异常
+FsSyncTool.isDirAndThrowError('./newFile.txt')
+
+//判断文件路径是否存在
+FsSyncTool.isExistPath('./sss');
+
+//创建文件夹,如果文件夹存在则抛出异常
+FsSyncTool.createDir('./test_dir')
+
+//创建文件夹,如果存在则覆盖
+FsSyncTool.createDirAndCoverOld('./test_dir').then(xxx);
+
+//获取文件utf8内容
+FsSyncTool.getFileUTF8Content("./test_files_dir/testFile.txt");
+
+//获取文件夹的子文件夹或文件
+FsSyncTool.getChildFileOrDir('./test_files_dir');
+
+//拷贝文件或文件夹,如果源文件夹或文件不存在则抛出异常,如果目标文件或文件夹已存在则抛出异常
+FsSyncTool.copyFileOrDir(sourcePath, targetPath).then(xxx);
+
+//拷贝文件或文件夹,如果目标文件夹已存在则覆盖,如果源文件夹或文件不存在则抛出异常
+FsSyncTool.copyFileOrDirCoverOld("./test_files_dir", "./test_dir_copy").then(xxx);
+
+//修改文件或文件夹的用户归属(文件)
+FsSyncTool.changeFileOrDirUser("./test_files_dir/testFile.txt", "daiyc");
+
+//修改文件或文件夹的用户归属(文件夹)
+FsSyncTool.changeFileOrDirUser("./test_files_dir", "daiyc");
+
+//删除文件夹
+FsSyncTool.removeDir("./test_files_dir").then(xxxx);
+
+//删除文件夹或文件
+FsSyncTool.removeFileOrDir("./test_dir_copy/testFile.txt").then(xxxx);
+
+
+```
+
+> 全部方法:
 
 | 方法名 | 参数 | 是否是Promise类型  | 返回值  | 说明 |
 | ------ | ------ | ----- | ----- | ----- |
