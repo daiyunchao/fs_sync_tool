@@ -1,0 +1,29 @@
+{
+  "name": "fs_sync_tool",
+  "version": "1.0.0",
+  "description": "nodejs fs sync tool 同步操作文件工具",
+  "main": "lib/fs_sync_tool.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daiyunchao/fs_sync_tool.git"
+  },
+  "keywords": [
+    "fs",
+    "sync",
+    "removedir",
+    "tool"
+  ],
+  "author": "daiyunchao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daiyunchao/fs_sync_tool/issues"
+  },
+  "homepage": "https://github.com/daiyunchao/fs_sync_tool#readme",
+  "dependencies": {
+    "ncp": "^2.0.0",
+    "shelljs": "^0.8.1"
+  }
+}
