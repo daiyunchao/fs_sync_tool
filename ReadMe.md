@@ -1,5 +1,13 @@
 > NodeJs 文件操作 同步执行库 提供了删除文件夹 修改文件所属用户(linux系统)
 
+> 说明:
+ 本库使用ES6 编写 ,请确保你的Node版本支持 class Promise async await 功能
+ 
+> 安装:
+```
+npm i fs_sync_tool --save -d
+```
+
 > 方法说明:
 
 | 方法名 | 参数 | 是否是Promise类型  | 返回值  | 说明 |
@@ -22,4 +30,6 @@
 | 修改文件或文件夹所属用户 changeFileOrDirUser | path 文件或文件夹路径 user 所属用户的名称 | 否 | 无 | 修改文件或文件夹的所属用户,使用shell,只适用于linux
 | 拷贝文件或文件夹 copyFileOrDir | sourcePath 源文件路径 targetPath 目标文件路径 ncpLimit 拷贝文件层级 默认值为:16 | 否 | 无 | 源路径不存在或目标路径已存在,都会 throw Error
 | 拷贝文件或文件夹,如果目标文件或文件夹已存在则会覆盖 copyFileOrDirCoverOld | sourcePath 源文件路径 targetPath 目标文件路径 ncpLimit 拷贝文件层级 默认值为:16 | 是 | Promise | 源路径不存在 throw Error
+
+
 

@@ -111,7 +111,6 @@ class FsSyncTool {
       if (files.length > 0) {
         return false
       }
-      console.log("in dirIsEmpty !if");
       return true;
     }
 

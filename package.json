@@ -1,8 +1,8 @@
 {
   "name": "fs_sync_tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "nodejs fs sync tool 同步操作文件工具",
-  "main": "lib/fs_sync_tool.js",
+  "main": "index.js",
   "scripts": {
     "build": "babel src -d lib"
   },
