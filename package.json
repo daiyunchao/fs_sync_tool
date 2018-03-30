@@ -1,6 +1,6 @@
 {
   "name": "fs_sync_tool",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "nodejs fs sync tool 同步操作文件工具",
   "main": "index.js",
   "scripts": {
